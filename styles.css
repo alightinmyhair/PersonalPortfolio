@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Nanum Myeongjo', Serif;
-    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,37 +33,39 @@ body {
     height: 80vh;
     border-radius: 40px;
     cursor: pointer;
-    flex: 0.3;
+    flex: 0.5;
     margin: 10px;
     position: relative;
-    transition: flex 0.9s ease-in;
+    transition: flex .7s ease-in;
 }
 
 .panel h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 60px;
+    font-size: 40px;
     position: absolute;
     color: #D8F29B;
     /* color:#EBF6F3; */
     bottom: 20px;
-    right: 40px;
+    right: 10px;
     margin: 0;
     opacity:0;
 }
 
 .panel p{
     opacity: 0;
-    transition: opacity 0.3s ease-in 0.5s;
+    /* transition: opacity 0.3s ease-in 0.5s;
+    text-align: left; */
 }
 
-.panel.info p{
-    /* opacity: 0; */
+/* .panel.info p{
+    opacity: 0;
     transition: opacity 0.3s ease-in 0.5s;
-}
+} */
 
 
 .panel.active {
-    flex: 6;
+    flex: 14;
+
 }
 
 .panel.active h3 {
@@ -73,20 +74,17 @@ body {
 }
 
 .panel.active p {
-    margin: 50px;
+    margin: 30px;
     opacity: 1;
-    text-align: center;  
+    text-align: left;  
     transition: opacity 0.3s ease-in 0.5s;
 
 }
 
+/* .panel p.star:hover {
+    text-transform:lowercase;
+} */
 
-.panel.active input[type='text'] {
-    flex: 20px;
-    padding: 5px;  
-    height: 20px;
-    width: 300px;
-  }
 
 /*Cursor*/
 .txt-type > .txt {
