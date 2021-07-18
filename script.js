@@ -24,16 +24,12 @@ function removeActiveClasses() {
         // console.log(panel.classList.length === 2);
         
         if(panel.classList.length === 2) {
-            // removeActiveClasses(panel);
             if (typeWriters.length > 0){
                 typeWriters.forEach((typeWriter) => {
-                    console.log('id: ', typeWriter.timeoutId)
                     typeWriter.stopTyping();
+                    // typeWriter.removeWord();
 
                 })
-                // typeWriter.stopTyping();
-                // console.log('timeout id:', typeWriter.timeoutId);
-                // clearTimeout(typeWriter.timeoutId);
             }
         }
         
@@ -42,12 +38,13 @@ function removeActiveClasses() {
 }
 
 
-const TypeWriter = function(txtElement, words, wait = 5000) {
+const TypeWriter = function(txtElement, words, wait = 2500) {
     this.txtElement = txtElement;
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
     this.wait = parseInt(wait, 10);
+
     //below is the main method of type, that is associated with this typewriter, that does everything
     this.type = function() {
         //current index of word
@@ -75,6 +72,7 @@ const TypeWriter = function(txtElement, words, wait = 5000) {
         typeSpeed /=2;
     }
 
+
     //if word is complete
     if(!this.isDeleting && this.txt === fullTxt) {
         //make pause at end
@@ -94,6 +92,7 @@ const TypeWriter = function(txtElement, words, wait = 5000) {
     // timerId = setTimeout(() => this.type(), typeSpeed);
     this.timeoutId = setTimeout(() => this.type(), typeSpeed);
     };
+
     this.isDeleting = false;
     this.timeoutId = 0;
     this.stopTyping = function() {
@@ -102,6 +101,15 @@ const TypeWriter = function(txtElement, words, wait = 5000) {
             this.timeoutId = 0;
         }
     }
+    // this.txt
+    // this.fullTxt = this.words[current];
+
+    // this.removeWord = function() {
+    //     if(this.timeoutId === 0){
+    //         this.txt = fullTxt.substring(0, this.txt.length -this.txt.length);
+    //     }
+    // }
+
 }
 
 //Type Method
@@ -172,26 +180,26 @@ document.addEventListener('DOMContentLoaded', startTypeWriter);
 //Init App
 function startTypeWriter(){
     const txtElementArray = document.querySelectorAll('.txt-type');
-    let waitTime = 5000;
+    let waitTime = 8000;
     
     
     txtElementArray.forEach((txtElement) => {
-        setInterval(function(){
-    
-            const words = JSON.parse(txtElement.getAttribute('data-words'));
-            const wait = txtElement.getAttribute('data-wait');
-    
-    
-            console.log('creating typewriter');
-            const tempTypeWriter = new TypeWriter(txtElement, words, waitTime);
-            tempTypeWriter.type();
-            typeWriters.push(tempTypeWriter);
-    
-            waitTime += 1000;
-    
-        }, 5000);
+        const words = JSON.parse(txtElement.getAttribute('data-words'));
+        const wait = txtElement.getAttribute('data-wait');
+
+
+        // console.log('creating typewriter');
+        const tempTypeWriter = new TypeWriter(txtElement, words, waitTime);
+        tempTypeWriter.type();
+        typeWriters.push(tempTypeWriter);
+
+        waitTime += 1000;
 
     })
 
 
+}
+
+function focusText() {
+    document.getElementById("focus").focus();
 }
