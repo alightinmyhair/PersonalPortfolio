@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Nanum Myeongjo', Serif;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +34,7 @@ body {
     height: 80vh;
     border-radius: 40px;
     cursor: pointer;
-    flex: 0.5;
+    flex: 1.5;
     margin: 10px;
     position: relative;
     transition: flex .7s ease-in;
@@ -41,7 +42,7 @@ body {
 
 .panel h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     color: #D8F29B;
     /* color:#EBF6F3; */
@@ -53,19 +54,12 @@ body {
 
 .panel p{
     opacity: 0;
-    /* transition: opacity 0.3s ease-in 0.5s;
-    text-align: left; */
+    position: absolute;
 }
-
-/* .panel.info p{
-    opacity: 0;
-    transition: opacity 0.3s ease-in 0.5s;
-} */
 
 
 .panel.active {
     flex: 14;
-
 }
 
 .panel.active h3 {
@@ -78,14 +72,9 @@ body {
     opacity: 1;
     text-align: left;  
     transition: opacity 0.3s ease-in 0.5s;
+    overflow: hidden;
 
 }
-
-
-
-/* .panel p.star:hover {
-    text-transform:lowercase;
-} */
 
 
 /*Cursor*/
@@ -96,10 +85,12 @@ body {
 @media(max-width: 480px){
     .container{
         width: 100vw;
+        /* overflow: hidden;
+        position: relative; */
     }
 
     .panel:nth-of-type(4),
     .panel:nth-of-type(5){
-        display:none;
+            display:none;
     }
 }
