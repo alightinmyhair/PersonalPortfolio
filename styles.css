@@ -89,8 +89,8 @@ body {
         position: relative; */
     }
 
-    .panel:nth-of-type(3),
+    /* .panel:nth-of-type(3),
     .panel:nth-of-type(4){
             display:none;
-    }
+    } */
 }
