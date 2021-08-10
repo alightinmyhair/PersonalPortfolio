@@ -21,6 +21,9 @@ body {
 
 }
 
+.move{
+    font-size: 14px;
+}
 
 .container {
     display: flex;
@@ -61,6 +64,7 @@ a position and overflow property were needed*/
 }
 
 
+
 .panel.active {
     flex: 14;
 }
@@ -84,6 +88,7 @@ a position and overflow property were needed*/
 .txt-type > .txt {
     border-right: 0.2rem solid #777;
 }
+
 
 @media(max-width: 480px){
     .container{
