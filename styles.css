@@ -59,6 +59,9 @@ body {
     right: 15px;
     margin: 0;
     opacity:0;
+    text-shadow: 0 5px rgb(0,0,0,0);
+    /* background: linear-gradient(to bottom, rgba(175, 175, 161, 1),
+    rgba(0, 0, 0, 0.6)); */
 }
 
 /*to fix issue with panel not adjusting successfully after completion of typewriter
@@ -100,7 +103,7 @@ a position and overflow property were needed*/
     .container{
         width: 100vw;
         line-height: 0.9;
-        text-size-adjust: 20%;
+        text-size-adjust: 55%;
         /* overflow: hidden;
         position: relative; */
     }
