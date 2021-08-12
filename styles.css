@@ -3,11 +3,14 @@
 
 * {
     box-sizing: border-box;
+    /* text-size-adjust: auto; */
 }
 
 body {
     font-family: 'Nanum Myeongjo', Serif;
     font-size: 15px;
+    /* font-size: ; */
+    /* font-size: calc(4vw + 4vh + 2vmin); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,12 +21,15 @@ body {
     /* color: #D8F29B; */
     /* background-color:#EF722D; */
     background-color: #F88E53;
+    text-size-adjust: 5%;
 
 }
 
+/*this works*/
 .move{
-    font-size: 14px;
+    font-size: 12px;
 }
+
 
 .container {
     display: flex;
@@ -45,7 +51,7 @@ body {
 
 .panel h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     color: #84CE43;
     /* color:#EBF6F3; */
@@ -93,6 +99,8 @@ a position and overflow property were needed*/
 @media(max-width: 480px){
     .container{
         width: 100vw;
+        line-height: 0.9;
+        text-size-adjust: 20%;
         /* overflow: hidden;
         position: relative; */
     }
