@@ -21,7 +21,7 @@ body {
     /* color: #D8F29B; */
     /* background-color:#EF722D; */
     background-color: #F88E53;
-    text-size-adjust: 5%;
+    /* text-size-adjust: 500%; */
 
 }
 
@@ -103,17 +103,30 @@ a position and overflow property were needed*/
 }
 
 
-@media(max-width: 400px){
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .move {
+      /* width: 100vw; */
+      /* line-height: 0.5; */
+      text-size-adjust: 55%;
+    }
+    .container{
+        width: 100vw;
+        line-height: 0.5;
+        text-size-adjust: 100%;
+    }
+  }
+
+/* @media(max-width: 400px){
     .container{
         width: 100vw;
         line-height: 0.5;
         text-size-adjust: 25%;
         /* overflow: hidden;
         position: relative; */
-    }
+    /* } */
 
+    
     /* .panel:nth-of-type(3),
     .panel:nth-of-type(4){
             display:none;
     } */
-}
