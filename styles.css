@@ -26,10 +26,14 @@ body {
 }
 
 /*this works*/
-.move{
+/* .move{
     font-size: 12px;
-}
+} */
 
+a {
+    text-decoration: none;
+    color: #84CE43;
+}
 
 .container {
     display: flex;
@@ -99,11 +103,11 @@ a position and overflow property were needed*/
 }
 
 
-@media(max-width: 480px){
+@media(max-width: 400px){
     .container{
         width: 100vw;
-        line-height: 0.9;
-        text-size-adjust: 55%;
+        line-height: 1.0;
+        text-size-adjust: 65%;
         /* overflow: hidden;
         position: relative; */
     }
