@@ -106,8 +106,8 @@ a position and overflow property were needed*/
 @media(max-width: 400px){
     .container{
         width: 100vw;
-        line-height: 1.0;
-        text-size-adjust: 65%;
+        line-height: 0.5;
+        text-size-adjust: 25%;
         /* overflow: hidden;
         position: relative; */
     }
